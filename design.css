@@ -1,0 +1,168 @@
+/*over all and background*/
+body {
+	background-color:rgb(45, 52, 54);
+	color:white;}
+main {
+	background-color:rgb(24, 28, 31);
+	padding:5rem;
+	border-left:0.5rem solid rgb(220, 221, 225);
+/* order for  border radius top-left,top-right,bootm-right,bottom-left*/
+	border-radius:1rem 0.3rem 0.3rem  1rem;
+/* order for margin is top,right,bottom,left*/
+	margin:5rem 2rem 5rem 2rem;
+/*order for   box-shadow: [H-Offset] [V-Offset] [Blur] [Spread] [Color];
+Value,Name,What it does
+1st,Horizontal Offset,Pushes shadow Right (positive) or Left (negative).
+2nd,Vertical Offset,Pushes shadow Down (positive) or Up (negative).
+3rd,Blur Radius,"The higher the number, the softer and bigger the shadow."
+4th,Spread Radius,(Optional) Makes the shadow grow fatter in all directions.
+5th,Color,The color of the shadow (usually rgba for transparency).
+	*/
+	box-shadow:1rem -1rem 1rem 2px rgba(15, 15, 15, 0.8);
+	}
+/* styling individial elements*/
+h1 {
+	font-size: 5rem;
+	margin-bottom:0.2rem;
+	text-align: center;
+	color: rgb(220, 221, 225);
+	}
+p {
+	text-align:center;
+/* order of margin top ,right(3clock) ,bottom, left*/
+	margin-top:0.2rem ;
+	}
+.ban {
+	 text-align:right;
+	 margin-right:100px;
+	}
+button {
+	background-color:rgb(220,221,225);
+	border: none;
+	border-radius:5px 5px 5px 5px;
+	text-decoration:none ! important;
+	box-shadow:5px 5px 5px 5px rgb(24, 28, 31);
+}
+.x { 
+	position:relative;
+	width:100%;
+	height:auto;
+	margin:1rem;
+	text-align:center;
+	border:none;
+	}
+h2 {
+	text align:center;
+	font-size:2rem;
+	margin-bottom:10px;
+	color: rgb(220, 221, 225);
+}
+h3 {
+	margin-top:5px;
+	color: rgb(220, 221, 225);
+	}
+.q {
+	border-radius:10px 10px 3px 3px;
+	margin:10px;
+	background-color:rgb(60, 65, 70);
+	color:rgb(248, 249, 250);
+	box-shadow:0.3rem -0.3rem 0.3rem 2px rgba(15, 15, 15, 0.8);
+	padding :0.5rem;
+	font-size :15px;
+}
+.w {
+	border-radius: 3px  3px  3px  3px;
+	margin:10px;
+	background-color:rgb(60, 65, 70);
+	color:rgb(248, 249, 250);
+	box-shadow:0.3rem -0.3rem 0.3rem 2px rgba(15, 15, 15, 0.8);
+	padding :0.5rem;
+	font-size :15px;
+}
+.e, .r {
+	border-radius: 3px  3px  3px  3px;
+	margin:10px;
+	background-color:rgb(60, 65, 70);
+	color:rgb(248, 249, 250);
+	box-shadow:0.3rem -0.3rem 0.3rem 2px rgba(15, 15, 15, 0.8);
+	padding :0.5rem;
+	font-size :15px;
+}
+.t {
+	border-radius:3px 3px 10px 10px;
+	margin:10px;
+	background-color:rgb(60, 65, 70);
+	color:rgb(248, 249, 250);
+	box-shadow:0.3rem -0.3rem 0.3rem 2px rgba(15, 15, 15, 0.8);
+	padding :0.5rem;
+	font-size :15px;
+}
+.ink  {
+/* 1. The "Stone" or "Moss" color */
+	background-color: rgb(46, 79, 73); 
+    
+/* 2. The "Glitter" or "Reflection" */
+	text-shadow: 2px 2px 0px rgb(248, 249, 250); 
+    
+/* 3. The Text Color (Make this dark so the white shadow pops!) */
+	color: rgb(10, 15, 12); 
+    
+	border: none;
+	padding: 10px 20px;
+	font-weight: bold;
+	margin:0.8rem;
+}
+.ban {
+	
+/* 1. The "Stone" or "Moss" color */
+	background-color: rgb(46, 79, 73); 
+    
+/* 2. The "Glitter" or "Reflection" */
+	text-shadow: 2px 2px 0px rgb(248, 249, 250); 
+    
+/* 3. The Text Color (Make this dark so the white shadow pops!) */
+	color: rgb(10, 15, 12); 
+    
+	border: none;
+	padding: 10px 20px;
+	font-weight: bold;
+	margin:0.8rem;
+}
+/* now the transitions*/
+.q, .w, .e, .r, .t {
+	transition: all 0.4s ease-in-out;
+}
+
+/* 2. Define WHAT changes when the user clicks inside */
+.q:focus, .w:focus, .e:focus, .r:focus, .t:focus {
+    background-color: rgb(46, 79, 73); /* Shifts to your Sea Green */
+    box-shadow: 0px 0px 15px rgba(0, 255, 127, 0.5); /* Radioactive glow */
+    transform: scale(1.02); /* Makes the input feel 'pressable' by growing 2% */
+    outline: none; /* Removes the default blue browser border */
+    cursor: pointer;
+}
+/* 1. The Instruction */
+.ink, .ban {
+	transition: transform 0.2s ease-out, text-shadow 0.5s ease;
+}
+
+/* 2. The Change on Hover */
+.ink:hover, .ban:hover {
+    transform: translateY(-4px); /* Moves the button UP by 4 pixels */
+    text-shadow: 0px 0px 10px rgb(248, 249, 250); /* Makes the white glitter 'bloom' */
+    cursor: pointer; /* Changes mouse to a hand icon */
+}
+input::placeholder {
+    color: rgba(220, 221, 225, 0.4);
+    font-style: italic;
+}
+button:active {
+    transform: scale(0.95); /* Shrinks the button slightly when pressed */
+}
+h1::after .{
+    content: ""; /* Required for these to work */
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: rgb(0, 255, 127); /* A small radioactive bar under the title */
+}
